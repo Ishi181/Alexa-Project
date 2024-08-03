@@ -28,12 +28,12 @@ import datetime
 import wikipedia
 import pyjokes
 ```
-speech_recognition: For capturing and recognizing speech input.
-pyttsx3: For text-to-speech conversion.
-pywhatkit: For accessing YouTube and playing videos.
-datetime: For fetching the current time.
-wikipedia: For retrieving summaries from Wikipedia.
-pyjokes: For generating jokes.
+__speech_recognition:__ For capturing and recognizing speech input.
+__pyttsx3:__ For text-to-speech conversion.
+__pywhatkit:__ For accessing YouTube and playing videos.
+__datetime:__ For fetching the current time.
+__wikipedia:__ For retrieving summaries from Wikipedia.
+__pyjokes:__ For generating jokes.
 
 ### Initialization
 
@@ -43,16 +43,16 @@ engine = pyttsx3.init()
 voices = engine.getProperty("voices")
 engine.setProperty('voice', voices[1].id)
 ```
-listener: An instance of Recognizer to process audio input.
-engine: An instance of pyttsx3 to handle speech synthesis.
-voices: A list of available voices. The second voice is selected for the engine.
+__listener:__ An instance of Recognizer to process audio input.
+__engine:__ An instance of pyttsx3 to handle speech synthesis.
+__voices:__ A list of available voices. The second voice is selected for the engine.
 ### Text-to-Speech Function
 ```
 def engine_talk(text):
     engine.say(text)
     engine.runAndWait()
 ```
-engine_talk: A function that converts text to speech and speaks it out.
+__engine_talk:__ A function that converts text to speech and speaks it out.
 
 ### Voice Command Recognition
 ```
@@ -70,7 +70,7 @@ def user_commands():
         pass  
     return command
 ```
-user_commands: Listens for the user's voice, converts it to text, and processes it. The keyword "alexa" is used to activate the assistant, and it is removed from the command before further processing.
+__user_commands:__ Listens for the user's voice, converts it to text, and processes it. The keyword "alexa" is used to activate the assistant, and it is removed from the command before further processing.
 ### Main Function (run_alexa)
 ```
 def run_alexa():
@@ -96,12 +96,12 @@ def run_alexa():
     else:
         exit
 ```
-run_alexa: Executes the appropriate action based on the command:
-Play Music: Searches for and plays a song on YouTube.
-Tell Time: Announces the current time.
-Wikipedia Search: Provides a brief summary of a person or topic.
-Tell a Joke: Tells a random joke.
-Exit: Exits the function if the command doesn't match any known patterns.
+__run_alexa:__ Executes the appropriate action based on the command:
+__Play Music:__ Searches for and plays a song on YouTube.
+__Tell Time:__ Announces the current time.
+__Wikipedia Search:__ Provides a brief summary of a person or topic.
+__Tell a Joke:__ Tells a random joke.
+__Exit:__ Exits the function if the command doesn't match any known patterns.
 ### Program Execution
 ```
 run_alexa()
@@ -111,3 +111,5 @@ Calls the run_alexa function to start the voice assistant.
 ## Contributing
 If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
 
+## License
+This project is licensed under the MIT License.
